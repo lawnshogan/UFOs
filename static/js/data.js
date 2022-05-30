@@ -1,3 +1,4 @@
+// Data that is in JavaScript format
 var data = [
   {
     datetime: "1/1/2010",
