@@ -31,7 +31,7 @@
       <div class="jumbotron">
         <h1 class="display-4">The Truth is Out There</h1>
       </div>
-<!-- CONTAINER 1 - Adding "container-fluid" to the div will ensure that both elements we're adding will span the width of the viewport. 
+<!-- CONTAINER 1 TITLE - Adding "container-fluid" to the div will ensure that both elements we're adding will span the width of the viewport. 
     The "row" class makes sure that the title and paragraph will align neatly along the page.-->
       <div class="container-fluid">
         <div class="row">
@@ -49,13 +49,19 @@
             </div>
           </div>
         </div>
-
+<!-- CONTAINER 2 FILTER - The filters section looks like it will require less column space than the article title. 
+    Let's create a div with space for three columns and a nine-column div for the table -->
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
+<!-- add a form tag, then build the form by nesting additional elements within it. 
+    Let's give the form a name so that users will know what it's for -->
               <form class="bg-white">
+<!-- Add "Filter Search" button and setup user searches with example text-->
                   <button type = "button" id="filter-button">Filter Search</button>
               <ul class="list-group-item bg-dark" >
+                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                    <input type="reset">
                   <li class="list-group-item bg-white" >
                       <label for="date">Enter Date</label>
                       <input type="text" placeholder="1/10/2010" id="datetime" />
@@ -79,6 +85,9 @@
                 </ul>
               </form>
             </div>
+<!-- Build Table -->
+<!-- Line directly below creates a scroll table-->
+<div style="height:800px;width:800px;margin: auto;border:1px solid #4e4e4e;font:16px Arial, Serif;overflow:auto;">
             <div class="col-md-9">
                 <table class="table table-striped">
                       <thead>
@@ -96,8 +105,12 @@
             </table>
           </div>
         </div>
+    </div>
+<!-- 1) A link to a D3.js CDN 2)The file path to data.js 3) The file path to app.js-->
+<!-- Adding the link to D3.js allows the library to "listen" in on our code, or react to user input -->
       <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<!-- We linked to data.js next because the UFO sightings data needs to be loaded before it can be accessed -->
       <script src = 'static/js/data.js'></script>
-      <script src = "static/js/app1.js"></script>
+      <script src = "static/js/app.js"></script>
   </body>
 </html>
